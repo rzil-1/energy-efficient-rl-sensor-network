@@ -1,1 +1,18 @@
-venv/ 
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.so
+
+# Virtual environment folders
+venv/
+.venv/
+
+# Log files and temporary data
+*.log
+ppo_logs/
+sb3_logs/
+*.zip
+
+# VSCode workspace and environment settings
+.vscode/
+.env
