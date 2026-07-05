@@ -1,0 +1,21 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #050505;
+
+  --neon-green: #00ff80;
+  --neon-yellow: #ffea00;
+  --neon-red: #ff3366;
+  --panel-bg: rgba(10, 10, 10, 0.7);
+  --panel-border: rgba(255, 255, 255, 0.1);
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+  background: #000;
+}
