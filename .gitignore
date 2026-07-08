@@ -16,3 +16,25 @@ sb3_logs/
 # VSCode workspace and environment settings
 .vscode/
 .env
+.agents/
+graphify-out/
+
+# AI Agent & Planning Files
+.superpowers/
+docs/superpowers/
+AGENTS.md
+
+# Temporary Scratch & Debugging Scripts
+scratch/
+test_raw_env.py
+test_multi_agent.py
+
+# Logs, Data & Frontend Build Files
+logs/
+frontend-react/node_modules/
+frontend-react/dist/
+data/real_terrain.tif
+
+# OS generated files
+.DS_Store
+Thumbs.db
