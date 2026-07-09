@@ -1,4 +1,4 @@
-# Energy-Efficient RL Sensor Network
+# Elevation-Aware Sensor Network Optimization
 
 ![Neon Cyberpunk Dashboard UI](frontend-react/public/ui_screenshot.png)
 
