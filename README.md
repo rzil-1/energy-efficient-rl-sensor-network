@@ -24,21 +24,27 @@ We approach this as a **Decentralized Partially Observable Markov Decision Proce
 
 ### State Space (Observation)
 Each sensor $i$ observes an 11-dimensional vector at step $t$:
+
 $$ O_i^t = [ E(x, y)_{3 \times 3}, \frac{B_i^t}{B_{max}}, N_{active} ] $$
+
 - **$E(x, y)_{3 \times 3}$**: A 9-dimensional normalized 3x3 patch of the local terrain elevation around the sensor.
 - **$B_i^t$**: The current battery percentage (0.0 to 1.0).
 - **$N_{active}$**: The normalized count of neighboring sensors currently transmitting.
 
 ### Action Space
 Each agent outputs a continuous action mapped to transmit power:
+
 $$ A_i^t \in [0.0, 1.0] $$
+
 Higher power increases the effective coverage radius but drains the battery exponentially faster.
 
 ### The Multi-Agent Reward Function
 The ultimate goal is to maximize the Global Coverage $C(S)$ over the maximum number of steps while minimizing battery drain. However, standard team rewards drown individual agent contributions in noise. 
 
 We solve this using **Difference Rewards (Marginal Contribution)**:
+
 $$ R_i^t = \left( C(S) - C(S_{-i}) \right) - \lambda (A_i^t)^2 $$
+
 Where:
 - $C(S)$ is the total terrain area covered by all active sensors.
 - $C(S_{-i})$ is the counterfactual coverage if agent $i$ had output 0 power.
